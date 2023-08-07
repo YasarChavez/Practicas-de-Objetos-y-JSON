@@ -77,9 +77,6 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-
 let autos = [
     {
         name: "AUTO1",
@@ -122,10 +119,8 @@ let autos = [
         price: 700,
         id: 7,
         anio: 2006,
-    }
+    },
 ];
-
-
 
 console.log("autos :>> ", autos);
 console.log("autos.length :>> ", autos.length);
@@ -144,6 +139,10 @@ console.log("nuevoArreglo.length :>> ", nuevoArreglo.length);
 console.log("type :>> ", typeof nuevoArreglo);
 
 // Pasamos el arreglo a un nuevo arreglo filtrado
-let filtrados = nuevoArreglo.filter((anio)=> anio.anio >=2010);
+let filtrados = nuevoArreglo.filter((anio) => anio.anio >= 2012);
 console.log("filtrados :>> ", filtrados);
 console.log("filtrados.length :>> ", filtrados.length);
+
+filtrados.forEach((element) => {
+    alert(element.name + "\n" + element.price + "\n" + element.anio);
+});
